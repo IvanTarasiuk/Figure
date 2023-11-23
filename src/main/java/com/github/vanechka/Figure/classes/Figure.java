@@ -1,8 +1,8 @@
-package Figure;
+package com.github.vanechka.Figure.classes;
 
 import java.util.ArrayList;
 
-public class Figure1 {
+public class Figure {
 
     public static final int DEGREE = 2;
     public static final int THREE = 3;
@@ -25,10 +25,10 @@ public class Figure1 {
 
 
     private ArrayList<Integer> Point;
-    public Figure1(ArrayList<Integer> Point) {
+    public Figure(ArrayList<Integer> Point) {
         this.Point = Point;
     }
-    public static Figure1 createNewFigure(String figure, ArrayList<Integer> Point, int count) {
+    public static Figure createNewFigure(String figure, ArrayList<Integer> Point, int count) {
         if (figure.equals("CIRCLE")) {
             return new Circle(Point, count);
         } else if (figure.equals("SQUARE")) {
@@ -50,7 +50,7 @@ public class Figure1 {
         } else if (figure.equals("CONE")) {
             return new Cone(Point, count);
         } else if (figure.equals("FIGURE")) {
-            return new Figure1(Point);
+            return new Figure(Point);
         }
         return null;
     }

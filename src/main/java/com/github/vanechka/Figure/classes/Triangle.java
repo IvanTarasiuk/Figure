@@ -1,8 +1,8 @@
-package Figure;
+package com.github.vanechka.Figure.classes;
 
 import java.util.ArrayList;
 
-public class Triangle extends Figure1 {
+public class Triangle extends Figure {
 
     private ArrayList<Integer> Point;
     private int count;

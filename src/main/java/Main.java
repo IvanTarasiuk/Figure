@@ -1,4 +1,4 @@
-import Figure.*;
+import com.github.vanechka.Figure.classes.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -40,7 +40,7 @@ public class Main {
                     }
 
                     if (koor.equals("STOP_INPUT")) {
-                        Figure1 figure = Figure1.createNewFigure(input, Point, count);
+                        Figure figure = Figure.createNewFigure(input, Point, count);
                         if (figure.isFigureValid() && !input.equals("FIGURE")) {
                             System.out.println("The figure is valid");
                             System.out.print("The figure area ");

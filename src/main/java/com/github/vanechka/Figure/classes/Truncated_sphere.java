@@ -1,13 +1,12 @@
-package Figure;
+package com.github.vanechka.Figure.classes;
 
 import java.util.ArrayList;
 
-public class Cone extends Figure1 {
+class Truncated_sphere extends Figure {
 
     private ArrayList<Integer> Point;
     private int count;
-
-    public Cone(ArrayList<Integer> Point, int count) {
+    public Truncated_sphere(ArrayList<Integer> Point, int count) {
         super(Point);
         this.Point = Point;
         this.count = count;
@@ -15,7 +14,7 @@ public class Cone extends Figure1 {
 
     @Override
     public boolean isFigureValid() {
-        if (Point.size() == NINE && count == 3) {
+        if (Point.size() == NINE && count == THREE) {
             int vecx1 = Point.get(INDEX_THREE) - Point.get(0);
             int vecy1 = Point.get(INDEX_FOUR) - Point.get(1);
             int vecz1 = Point.get(INDEX_FIVE) - Point.get(INDEX_TWO);
@@ -24,7 +23,10 @@ public class Cone extends Figure1 {
             int vecy2 = Point.get(INDEX_SEVEN) - Point.get(1);
             int vecz2 = Point.get(INDEX_EIGHT) - Point.get(INDEX_TWO);
 
-            if ((vecx1 * vecx2 + vecy1 * vecy2 + vecz1 * vecz2) / (Math.sqrt(Math.pow(vecx1, DEGREE) + Math.pow(vecy1, DEGREE) + Math.pow(vecy1, DEGREE) * Math.sqrt(Math.pow(vecx2, DEGREE) + Math.pow(vecy2, DEGREE) + Math.pow(vecy2, DEGREE) ))) == 0) {
+            double radius = Math.sqrt(Math.pow(vecx1, DEGREE) + Math.pow(vecy1, DEGREE) + Math.pow(vecz1, DEGREE));
+            double height = Math.sqrt(Math.pow(vecx2, DEGREE) + Math.pow(vecy2, DEGREE) + Math.pow(vecz2, DEGREE));
+
+            if (radius == height && radius > 0) {
                 return true;
             }
         }
@@ -41,19 +43,21 @@ public class Cone extends Figure1 {
         int vecy2 = Point.get(INDEX_SEVEN) - Point.get(1);
         int vecz2 = Point.get(INDEX_EIGHT) - Point.get(INDEX_TWO);
 
-        int vecx3 = Point.get(INDEX_THREE) - Point.get(INDEX_SIX);
-        int vecy3 = Point.get(INDEX_FOUR) - Point.get(INDEX_SEVEN);
-        int vecz3 = Point.get(INDEX_FIVE) - Point.get(INDEX_EIGHT);
-
         double radius = Math.sqrt(Math.pow(vecx1, DEGREE) + Math.pow(vecy1, DEGREE) + Math.pow(vecz1, DEGREE));
-        double h = Math.sqrt(Math.pow(vecx2, DEGREE) + Math.pow(vecy2, DEGREE) + Math.pow(vecz2, DEGREE));
-        double l = Math.sqrt(Math.pow(vecx3, DEGREE) + Math.pow(vecy3, DEGREE) + Math.pow(vecz3, DEGREE));
-        double area = Math.PI * radius * (radius + l);
-        System.out.printf("%.2f", area);
+
+        double h0 = Math.abs(Point.get(INDEX_TWO) - Point.get(INDEX_EIGHT));
+        double h1 = radius - h0;
+
+        double s1 = 2 * Math.PI * h1 * radius;
+        double s2 = FOUR * Math.PI * Math.pow(radius, DEGREE);
+        double s3 = Math.PI * (Math.pow(radius, DEGREE) - Math.pow(h0, DEGREE));
+
+        double s0 = s2 - s1 + s3;
+        System.out.printf("%.2f", s0);
     }
 
     @Override
     public void perimetrFigure() {
-        System.out.println("The CONE has no perimeter");
+        System.out.print("The Figure.Truncated_sphere has no perimetr.");
     }
 }
