@@ -34,7 +34,7 @@ public class Circle extends Figure {
             double radius = (Math.pow(point.get(0) - point.get(INDEX_TWO), DEGREE) + Math.pow(point.get(1) - point.get(INDEX_THREE), DEGREE));
             System.out.printf("%.2f", Math.PI * 2 * Math.sqrt(radius));
         } else if (point.size() == SIX) {
-            Double radius = (Math.pow(point.get(0) - point.get(INDEX_THREE), DEGREE) + Math.pow(point.get(1) - point.get(INDEX_FOUR), DEGREE) + Math.pow(point.get(INDEX_TWO) - point.get(INDEX_FIVE), DEGREE));
+            double radius = (Math.pow(point.get(0) - point.get(INDEX_THREE), DEGREE) + Math.pow(point.get(1) - point.get(INDEX_FOUR), DEGREE) + Math.pow(point.get(INDEX_TWO) - point.get(INDEX_FIVE), DEGREE));
             System.out.printf("%.2f", Math.PI * 2 * Math.sqrt(radius));
         }
 

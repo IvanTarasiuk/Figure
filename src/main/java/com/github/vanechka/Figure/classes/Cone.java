@@ -35,16 +35,11 @@ public class Cone extends Figure {
         int vecy1 = point.get(INDEX_FOUR) - point.get(1);
         int vecz1 = point.get(INDEX_FIVE) - point.get(INDEX_TWO);
 
-        int vecx2 = point.get(INDEX_SIX) - point.get(0);
-        int vecy2 = point.get(INDEX_SEVEN) - point.get(1);
-        int vecz2 = point.get(INDEX_EIGHT) - point.get(INDEX_TWO);
-
         int vecx3 = point.get(INDEX_THREE) - point.get(INDEX_SIX);
         int vecy3 = point.get(INDEX_FOUR) - point.get(INDEX_SEVEN);
         int vecz3 = point.get(INDEX_FIVE) - point.get(INDEX_EIGHT);
 
         double radius = Math.sqrt(Math.pow(vecx1, DEGREE) + Math.pow(vecy1, DEGREE) + Math.pow(vecz1, DEGREE));
-        double h = Math.sqrt(Math.pow(vecx2, DEGREE) + Math.pow(vecy2, DEGREE) + Math.pow(vecz2, DEGREE));
         double l = Math.sqrt(Math.pow(vecx3, DEGREE) + Math.pow(vecy3, DEGREE) + Math.pow(vecz3, DEGREE));
         double area = Math.PI * radius * (radius + l);
         System.out.printf("%.2f", area);

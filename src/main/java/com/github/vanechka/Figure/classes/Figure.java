@@ -10,7 +10,6 @@ public class Figure {
     public static final int FIVE = 5;
     public static final int SIX = 6;
     public static final int EIGHT = 8;
-
     public static final int NINE = 9;
     public static final int TWELVE = 12;
     public static final int INDEX_TWO = 2;

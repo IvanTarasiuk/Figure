@@ -1,6 +1,7 @@
 package com.github.vanechka.Figure.classes;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Sphere extends Figure {
 
@@ -14,7 +15,7 @@ public class Sphere extends Figure {
     }
     @Override
     public boolean isFigureValid() {
-        return count == 2 && point.size() == SIX && (point.get(0) != point.get(INDEX_THREE) || point.get(1) != point.get(INDEX_FOUR) || point.get(INDEX_TWO) != point.get(INDEX_FIVE));
+        return count == 2 && point.size() == SIX && (!Objects.equals(point.get(0), point.get(INDEX_THREE)) || !Objects.equals(point.get(1), point.get(INDEX_FOUR)) || !Objects.equals(point.get(INDEX_TWO), point.get(INDEX_FIVE)));
     }
 
     @Override

@@ -1,6 +1,7 @@
 package com.github.vanechka.Figure.classes;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Polygon extends Figure {
 
@@ -17,7 +18,7 @@ public class Polygon extends Figure {
         int k = 0;
         if (point.size() % 2 == 0 && point.size() > FIVE) {
             for (int i = 0; i < point.size() / 2; i += 2) {
-                if (point.get(i) != point.get(i + 2) || point.get(i + 1) != point.get(i + THREE)) {
+                if (!Objects.equals(point.get(i), point.get(i + 2)) || !Objects.equals(point.get(i + 1), point.get(i + THREE))) {
                     k += 1;
                 }
             }
@@ -28,15 +29,11 @@ public class Polygon extends Figure {
             }
         } else if (point.size() % THREE == 0 && point.size() > EIGHT) {
             for (int i = 0; i < point.size() / 3; i += THREE) {
-                if (point.get(i) != point.get(i + THREE) || point.get(i + 1) != point.get(i + FOUR) || point.get(i + DEGREE) != point.get(i + FIVE)) {
+                if (!Objects.equals(point.get(i), point.get(i + THREE)) || !Objects.equals(point.get(i + 1), point.get(i + FOUR)) || !Objects.equals(point.get(i + DEGREE), point.get(i + FIVE))) {
                     k += 1;
                 }
             }
-            if (k >= DEGREE) {
-                return true;
-            } else {
-                return false;
-            }
+            return k >= DEGREE;
         }
         return false;
     }
