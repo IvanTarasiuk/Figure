@@ -6,8 +6,8 @@ public class Cylinder extends Figure {
 
     private ArrayList<Integer> point;
     private int count;
-    public Cylinder(ArrayList<Integer> Point, int count) {
-        super(Point);
+    public Cylinder(ArrayList<Integer> point, int count) {
+        super(point);
         this.point = point;
         this.count = count;
     }

@@ -7,8 +7,8 @@ public class Cone extends Figure {
     private ArrayList<Integer> point;
     private int count;
 
-    public Cone(ArrayList<Integer> Point, int count) {
-        super(Point);
+    public Cone(ArrayList<Integer> point, int count) {
+        super(point);
         this.point = point;
         this.count = count;
     }
