@@ -25,9 +25,9 @@ public class Figure {
     public static final int INDEX_ELEVEN = 11;
 
 
-    private ArrayList<Integer> Point;
+    private ArrayList<Integer> point;
     public Figure(ArrayList<Integer> Point) {
-        this.Point = Point;
+        this.point = point;
     }
     public static Figure createNewFigure(String figure, ArrayList<Integer> Point, int count) {
         if (figure.equals("CIRCLE")) {
