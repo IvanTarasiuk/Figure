@@ -4,24 +4,24 @@ import java.util.ArrayList;
 
 class TruncatedSphere extends Figure {
 
-    private ArrayList<Integer> Point;
+    private ArrayList<Integer> point;
     private int count;
-    public TruncatedSphere(ArrayList<Integer> Point, int count) {
-        super(Point);
-        this.Point = Point;
+    public TruncatedSphere(ArrayList<Integer> point, int count) {
+        super(point);
+        this.point = point;
         this.count = count;
     }
 
     @Override
     public boolean isFigureValid() {
-        if (Point.size() == NINE && count == THREE) {
-            int vecx1 = Point.get(INDEX_THREE) - Point.get(0);
-            int vecy1 = Point.get(INDEX_FOUR) - Point.get(1);
-            int vecz1 = Point.get(INDEX_FIVE) - Point.get(INDEX_TWO);
+        if (point.size() == NINE && count == THREE) {
+            int vecx1 = point.get(INDEX_THREE) - point.get(0);
+            int vecy1 = point.get(INDEX_FOUR) - point.get(1);
+            int vecz1 = point.get(INDEX_FIVE) - point.get(INDEX_TWO);
 
-            int vecx2 = Point.get(INDEX_SIX) - Point.get(0);
-            int vecy2 = Point.get(INDEX_SEVEN) - Point.get(1);
-            int vecz2 = Point.get(INDEX_EIGHT) - Point.get(INDEX_TWO);
+            int vecx2 = point.get(INDEX_SIX) - point.get(0);
+            int vecy2 = point.get(INDEX_SEVEN) - point.get(1);
+            int vecz2 = point.get(INDEX_EIGHT) - point.get(INDEX_TWO);
 
             double radius = Math.sqrt(Math.pow(vecx1, DEGREE) + Math.pow(vecy1, DEGREE) + Math.pow(vecz1, DEGREE));
             double height = Math.sqrt(Math.pow(vecx2, DEGREE) + Math.pow(vecy2, DEGREE) + Math.pow(vecz2, DEGREE));
@@ -35,17 +35,13 @@ class TruncatedSphere extends Figure {
 
     @Override
     public void areaFigure() {
-        int vecx1 = Point.get(INDEX_THREE) - Point.get(0);
-        int vecy1 = Point.get(INDEX_FOUR) - Point.get(1);
-        int vecz1 = Point.get(INDEX_FIVE) - Point.get(INDEX_TWO);
-
-        int vecx2 = Point.get(INDEX_SIX) - Point.get(0);
-        int vecy2 = Point.get(INDEX_SEVEN) - Point.get(1);
-        int vecz2 = Point.get(INDEX_EIGHT) - Point.get(INDEX_TWO);
+        int vecx1 = point.get(INDEX_THREE) - point.get(0);
+        int vecy1 = point.get(INDEX_FOUR) - point.get(1);
+        int vecz1 = point.get(INDEX_FIVE) - point.get(INDEX_TWO);
 
         double radius = Math.sqrt(Math.pow(vecx1, DEGREE) + Math.pow(vecy1, DEGREE) + Math.pow(vecz1, DEGREE));
 
-        double h0 = Math.abs(Point.get(INDEX_TWO) - Point.get(INDEX_EIGHT));
+        double h0 = Math.abs(point.get(INDEX_TWO) - point.get(INDEX_EIGHT));
         double h1 = radius - h0;
 
         double s1 = 2 * Math.PI * h1 * radius;
