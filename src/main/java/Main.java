@@ -18,7 +18,7 @@ public class Main {
             Matcher m = f1gure.matcher(input);
             int count = 0;
             if (m.matches()) {
-                System.out.println("Введите коорбинаты фигуры.");
+                System.out.println("Введите координаты фигуры.");
                 boolean marker1 = true;
                 do {
                     String koords = sc.nextLine();
