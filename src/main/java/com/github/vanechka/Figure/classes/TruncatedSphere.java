@@ -2,11 +2,11 @@ package com.github.vanechka.Figure.classes;
 
 import java.util.ArrayList;
 
-class Truncated_sphere extends Figure {
+class TruncatedSphere extends Figure {
 
     private ArrayList<Integer> Point;
     private int count;
-    public Truncated_sphere(ArrayList<Integer> Point, int count) {
+    public TruncatedSphere(ArrayList<Integer> Point, int count) {
         super(Point);
         this.Point = Point;
         this.count = count;

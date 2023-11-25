@@ -44,7 +44,7 @@ public class Figure {
         } else if (figure.equals("SPHERE")) {
             return new Sphere(Point, count);
         } else if (figure.equals("TRUNCATED_SPHERE")) {
-            return new Truncated_sphere(Point, count);
+            return new TruncatedSphere(Point, count);
         } else if (figure.equals("CYLINDER")) {
             return new Cylinder(Point, count);
         } else if (figure.equals("CONE")) {

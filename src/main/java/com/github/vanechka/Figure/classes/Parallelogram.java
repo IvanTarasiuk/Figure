@@ -19,17 +19,13 @@ public class Parallelogram extends Figure {
             double side2 = Math.pow(Point.get(INDEX_TWO) - Point.get(INDEX_FOUR), DEGREE) + Math.pow(Point.get(INDEX_THREE) - Point.get(INDEX_FIVE), DEGREE);
             double side3 = Math.pow(Point.get(INDEX_FOUR) - Point.get(INDEX_SIX), DEGREE) + Math.pow(Point.get(INDEX_FIVE) - Point.get(INDEX_SEVEN), DEGREE);
             double side4 = Math.pow(Point.get(INDEX_SIX) - Point.get(0), DEGREE) + Math.pow(Point.get(INDEX_SEVEN) - Point.get(1), DEGREE);
-            if (count == FOUR && side1 == side3 && side2 == side4) {
-                return true;
-            }
+            return count == FOUR && side1 == side3 && side2 == side4;
         } else if (Point.size() == TWELVE) {
             int side1 = (int) (Math.pow(Point.get(0) - Point.get(INDEX_THREE), DEGREE) + Math.pow((Point.get(1) - Point.get(INDEX_FOUR)), DEGREE) + Math.pow((Point.get(INDEX_TWO) - Point.get(INDEX_FIVE)), DEGREE));
             int side2 = (int) (Math.pow(Point.get(INDEX_THREE) - Point.get(INDEX_SIX), DEGREE) + Math.pow((Point.get(INDEX_FOUR) - Point.get(INDEX_SEVEN)), DEGREE) + Math.pow((Point.get(INDEX_FIVE) - Point.get(INDEX_EIGHT)), DEGREE));
             int side3 = (int) (Math.pow(Point.get(INDEX_SIX) - Point.get(INDEX_NINE), DEGREE) + Math.pow((Point.get(INDEX_SEVEN) - Point.get(INDEX_TEN)), DEGREE) + Math.pow((Point.get(INDEX_EIGHT) - Point.get(INDEX_ELEVEN)), DEGREE));
             int side4 = (int) (Math.pow(Point.get(INDEX_NINE) - Point.get(0), DEGREE) + Math.pow((Point.get(INDEX_TEN) - Point.get(1)), DEGREE) + Math.pow((Point.get(INDEX_ELEVEN) - Point.get(INDEX_TWO)), DEGREE));
-            if (count == FOUR && side1 == side3 && side2 == side4) {
-                return true;
-            }
+            return count == FOUR && side1 == side3 && side2 == side4;
         }
         return false;
     }
