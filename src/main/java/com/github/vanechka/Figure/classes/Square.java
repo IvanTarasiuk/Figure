@@ -22,9 +22,7 @@ public class Square extends Figure {
             int side4 = (int) (Math.pow(point.get(INDEX_SIX) - point.get(0), DEGREE) + Math.pow(point.get(INDEX_SEVEN) - point.get(1), DEGREE));
             double diag1 = Math.pow(point.get(0) - point.get(INDEX_FOUR), DEGREE) + Math.pow(point.get(1) - point.get(INDEX_FIVE), DEGREE);
             double diag2 = Math.pow(point.get(INDEX_TWO) - point.get(INDEX_SIX), DEGREE) + Math.pow(point.get(INDEX_THREE) - point.get(INDEX_SEVEN), DEGREE);
-            if (count == FOUR && side1 == side3 && side2 == side4 && side1 == side2 && diag1 == diag2) {
-                return true;
-            }
+            return count == FOUR && side1 == side3 && side2 == side4 && side1 == side2 && diag1 == diag2;
         } else if (point.size() == TWELVE) {
             int side1 = (int) (Math.pow(point.get(0) - point.get(INDEX_THREE), DEGREE) + Math.pow((point.get(1) - point.get(INDEX_FOUR)), DEGREE) + Math.pow((point.get(INDEX_TWO) - point.get(INDEX_FIVE)), DEGREE));
             int side2 = (int) (Math.pow(point.get(INDEX_THREE) - point.get(INDEX_SIX), DEGREE) + Math.pow((point.get(INDEX_FOUR) - point.get(INDEX_SEVEN)), DEGREE) + Math.pow((point.get(INDEX_FIVE) - point.get(INDEX_EIGHT)), DEGREE));

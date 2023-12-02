@@ -22,11 +22,7 @@ public class Polygon extends Figure {
                     k += 1;
                 }
             }
-            if (k >= 2) {
-                return true;
-            } else {
-                return false;
-            }
+            return k >= 2;
         } else if (point.size() % THREE == 0 && point.size() > EIGHT) {
             for (int i = 0; i < point.size() / 3; i += THREE) {
                 if (!Objects.equals(point.get(i), point.get(i + THREE)) || !Objects.equals(point.get(i + 1), point.get(i + FOUR)) || !Objects.equals(point.get(i + DEGREE), point.get(i + FIVE))) {

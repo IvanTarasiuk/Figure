@@ -52,7 +52,7 @@ public class Main {
                                 marker1 = false;
                                 marker = false;
                             } else {
-                                System.out.println("The figure is figyre");
+                                System.out.println("The figure is figure");
                                 figure.areaFigure();
                                 figure.perimetrFigure();
                                 System.out.println("Введите фигуру.");
@@ -60,7 +60,7 @@ public class Main {
                                 Point.clear();
                             }
                         } else {
-                            System.out.println("The figyre is invalid");
+                            System.out.println("The figure is invalid");
                             System.out.println("Введите фигуру.");
                             marker1 = false;
                             Point.clear();
