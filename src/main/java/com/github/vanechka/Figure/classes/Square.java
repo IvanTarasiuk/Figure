@@ -35,20 +35,22 @@ public class Square extends Figure {
         return false;
     }
     @Override
-    public void areaFigure() {
+    public double areaFigure() {
         if (point.size() == EIGHT) {
             System.out.printf("%.2f", Math.pow(point.get(0) - point.get(INDEX_TWO), DEGREE) + Math.pow(point.get(1) - point.get(INDEX_THREE), DEGREE));
         } else if (point.size() == TWELVE) {
             System.out.printf("%.2f", Math.pow(point.get(0) - point.get(INDEX_THREE), DEGREE) + Math.pow(point.get(1) - point.get(INDEX_FOUR), DEGREE) + Math.pow(point.get(INDEX_TWO) - point.get(INDEX_FIVE), DEGREE));
         }
+        return 0;
     }
 
     @Override
-    public void perimetrFigure() {
+    public float perimetrFigure() {
         if (point.size() == EIGHT) {
             System.out.printf("%.2f", Math.sqrt(Math.pow(point.get(0) - point.get(INDEX_TWO), DEGREE) + Math.pow(point.get(1) - point.get(INDEX_THREE), DEGREE)) * FOUR);
         } else if (point.size() == TWELVE) {
             System.out.printf("%.2f", Math.sqrt(Math.pow(point.get(0) - point.get(INDEX_THREE), DEGREE) + Math.pow(point.get(1) - point.get(INDEX_FOUR), DEGREE) + Math.pow(point.get(INDEX_TWO) - point.get(INDEX_FIVE), DEGREE)) * FOUR);
         }
+        return 0;
     }
 }

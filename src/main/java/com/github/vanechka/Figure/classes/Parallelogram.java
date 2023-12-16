@@ -31,7 +31,7 @@ public class Parallelogram extends Figure {
     }
 
     @Override
-    public void areaFigure() {
+    public double areaFigure() {
         if (point.size() == EIGHT) {
             double diag1 = Math.sqrt(Math.pow(point.get(0) - point.get(INDEX_FOUR), DEGREE) + Math.pow(point.get(1) - point.get(INDEX_FIVE), DEGREE));
             double diag2 = Math.sqrt(Math.pow(point.get(INDEX_TWO) - point.get(INDEX_SIX), DEGREE) + Math.pow(point.get(INDEX_THREE) - point.get(INDEX_SEVEN), DEGREE));
@@ -44,14 +44,16 @@ public class Parallelogram extends Figure {
             double cos =  (((point.get(INDEX_SIX) - point.get(0)) * (point.get(INDEX_NINE) - point.get(INDEX_THREE))) + ((point.get(INDEX_SEVEN) - point.get(1)) * (point.get(INDEX_TEN) - point.get(INDEX_FOUR))) + ((point.get(INDEX_EIGHT) - point.get(INDEX_TWO)) * (point.get(INDEX_ELEVEN) - point.get(INDEX_FIVE)))) / (Math.sqrt(Math.pow(point.get(INDEX_SIX) - point.get(0), DEGREE) + Math.pow(point.get(INDEX_SEVEN) - point.get(1), DEGREE) + Math.pow(point.get(INDEX_EIGHT) - point.get(INDEX_TWO), DEGREE)) * Math.sqrt(Math.pow(point.get(INDEX_NINE) - point.get(INDEX_THREE), DEGREE) + Math.pow(point.get(INDEX_TEN) - point.get(INDEX_FOUR), DEGREE) + Math.pow(point.get(INDEX_ELEVEN) - point.get(INDEX_FIVE), DEGREE)));
             System.out.printf("%.2f", diag1 * diag2 * Math.sqrt(1 - Math.pow(cos , DEGREE)) / DEGREE);
         }
+        return 0;
     }
 
     @Override
-    public void perimetrFigure() {
+    public float perimetrFigure() {
         if (point.size() == EIGHT) {
             System.out.printf("%.2f", 2 * Math.sqrt(Math.pow(point.get(0) - point.get(INDEX_TWO), DEGREE) + Math.pow(point.get(1) - point.get(INDEX_THREE), DEGREE)) + 2 * Math.sqrt(Math.pow(point.get(INDEX_TWO) - point.get(INDEX_FOUR), DEGREE) + Math.pow(point.get(INDEX_THREE) - point.get(INDEX_FIVE), DEGREE)));
         } else if (point.size() == TWELVE) {
             System.out.printf("%.2f", 2 * Math.sqrt(Math.pow(point.get(0) - point.get(INDEX_THREE), DEGREE) + Math.pow(point.get(1) - point.get(INDEX_FOUR), DEGREE) + Math.pow(point.get(INDEX_TWO) - point.get(INDEX_FIVE), DEGREE)) + 2 * Math.sqrt(Math.pow(point.get(INDEX_THREE) - point.get(INDEX_SIX), DEGREE) + Math.pow(point.get(INDEX_FOUR) - point.get(INDEX_SEVEN), DEGREE) + Math.pow(point.get(INDEX_FIVE) - point.get(INDEX_EIGHT), DEGREE)));
         }
+        return 0;
     }
 }

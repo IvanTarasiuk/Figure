@@ -18,7 +18,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void areaFigure() {
+    public double areaFigure() {
         if (point.size() == FOUR) {
             double radius = (Math.pow(point.get(0) - point.get(INDEX_TWO), DEGREE) + Math.pow(point.get(1) - point.get(INDEX_THREE), DEGREE));
             System.out.printf("%.2f", Math.PI * radius);
@@ -26,10 +26,11 @@ public class Circle extends Figure {
             double radius = (Math.pow(point.get(0) - point.get(INDEX_THREE), DEGREE) + Math.pow(point.get(1) - point.get(INDEX_FOUR), DEGREE) + Math.pow(point.get(INDEX_TWO) - point.get(INDEX_FIVE), DEGREE));
             System.out.printf("%.2f", Math.PI * radius);
         }
+        return 0;
     }
 
     @Override
-    public void perimetrFigure() {
+    public float perimetrFigure() {
         if (point.size() == FOUR) {
             double radius = (Math.pow(point.get(0) - point.get(INDEX_TWO), DEGREE) + Math.pow(point.get(1) - point.get(INDEX_THREE), DEGREE));
             System.out.printf("%.2f", Math.PI * 2 * Math.sqrt(radius));
@@ -37,8 +38,6 @@ public class Circle extends Figure {
             double radius = (Math.pow(point.get(0) - point.get(INDEX_THREE), DEGREE) + Math.pow(point.get(1) - point.get(INDEX_FOUR), DEGREE) + Math.pow(point.get(INDEX_TWO) - point.get(INDEX_FIVE), DEGREE));
             System.out.printf("%.2f", Math.PI * 2 * Math.sqrt(radius));
         }
-
+        return 0;
     }
-
-
 }

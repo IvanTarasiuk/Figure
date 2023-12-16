@@ -23,7 +23,7 @@ public class Triangle extends Figure {
     }
 
     @Override
-    public void areaFigure() {
+    public double areaFigure() {
         if (point.size() == SIX) {
             double side1 = Math.sqrt(Math.pow(point.get(0) - point.get(INDEX_TWO), DEGREE) + Math.pow(point.get(1) - point.get(INDEX_THREE), DEGREE));
             double side2 = Math.sqrt(Math.pow(point.get(INDEX_TWO) - point.get(INDEX_FOUR), DEGREE) + Math.pow(point.get(INDEX_THREE) - point.get(INDEX_FIVE), DEGREE));
@@ -37,10 +37,11 @@ public class Triangle extends Figure {
             double halfperimetr = (side1 + side2 + side3) / 2;
             System.out.printf("%.2f", Math.sqrt(halfperimetr * (halfperimetr - side1) * (halfperimetr - side2) * (halfperimetr - side3)));
         }
+        return 0;
     }
 
     @Override
-    public void perimetrFigure() {
+    public float perimetrFigure() {
         if (point.size() == SIX) {
             double side1 = Math.sqrt(Math.pow(point.get(0) - point.get(INDEX_TWO), DEGREE) + Math.pow(point.get(1) - point.get(INDEX_THREE), DEGREE));
             double side2 = Math.sqrt(Math.pow(point.get(INDEX_TWO) - point.get(INDEX_FOUR), DEGREE) + Math.pow(point.get(INDEX_THREE) - point.get(INDEX_FIVE), DEGREE));
@@ -52,5 +53,6 @@ public class Triangle extends Figure {
             double side3 = Math.sqrt(Math.pow(point.get(INDEX_SIX) - point.get(0), DEGREE) + Math.pow(point.get(INDEX_SEVEN) - point.get(1), DEGREE) + Math.pow(point.get(INDEX_EIGHT) - point.get(INDEX_TWO), DEGREE));
             System.out.printf("%.2f", side1 + side2 + side3);
         }
+        return 0;
     }
 }

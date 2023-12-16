@@ -32,7 +32,7 @@ public class Cylinder extends Figure {
     }
 
     @Override
-    public void areaFigure() {
+    public double areaFigure() {
         double vecx1 = point.get(0) - point.get(INDEX_SIX);
         double vecx2 = point.get(INDEX_THREE) - point.get(INDEX_SIX);
         double vecx3 = point.get(INDEX_THREE) - point.get(0);
@@ -51,10 +51,12 @@ public class Cylinder extends Figure {
             double area = 2 * Math.PI * Math.sqrt(Math.pow(vecx2, DEGREE) + Math.pow(vecy2, DEGREE) + Math.pow(vecz2, DEGREE)) * (Math.sqrt(Math.pow(vecx3, DEGREE) + Math.pow(vecy3, DEGREE) + Math.pow(vecz3, DEGREE)) + Math.sqrt(Math.pow(vecx2, DEGREE) + Math.pow(vecy2, DEGREE) + Math.pow(vecz2, DEGREE)));
             System.out.printf("%.2f", area);
         }
+        return vecx1;
     }
 
     @Override
-    public void perimetrFigure() {
+    public float perimetrFigure() {
         System.out.println("The CYLINDER has no perimeter");
+        return 0;
     }
 }

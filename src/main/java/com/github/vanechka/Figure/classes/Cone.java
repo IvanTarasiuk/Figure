@@ -30,7 +30,7 @@ public class Cone extends Figure {
     }
 
     @Override
-    public void areaFigure() {
+    public double areaFigure() {
         int vecx1 = point.get(INDEX_THREE) - point.get(0);
         int vecy1 = point.get(INDEX_FOUR) - point.get(1);
         int vecz1 = point.get(INDEX_FIVE) - point.get(INDEX_TWO);
@@ -43,10 +43,12 @@ public class Cone extends Figure {
         double l = Math.sqrt(Math.pow(vecx3, DEGREE) + Math.pow(vecy3, DEGREE) + Math.pow(vecz3, DEGREE));
         double area = Math.PI * radius * (radius + l);
         System.out.printf("%.2f", area);
+        return radius;
     }
 
     @Override
-    public void perimetrFigure() {
+    public float perimetrFigure() {
         System.out.println("The CONE has no perimeter");
+        return 0;
     }
 }

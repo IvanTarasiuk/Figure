@@ -34,7 +34,7 @@ class TruncatedSphere extends Figure {
     }
 
     @Override
-    public void areaFigure() {
+    public double areaFigure() {
         int vecx1 = point.get(INDEX_THREE) - point.get(0);
         int vecy1 = point.get(INDEX_FOUR) - point.get(1);
         int vecz1 = point.get(INDEX_FIVE) - point.get(INDEX_TWO);
@@ -50,10 +50,12 @@ class TruncatedSphere extends Figure {
 
         double s0 = s2 - s1 + s3;
         System.out.printf("%.2f", s0);
+        return radius;
     }
 
     @Override
-    public void perimetrFigure() {
+    public float perimetrFigure() {
         System.out.print("The Figure.Truncated_sphere has no perimetr.");
+        return 0;
     }
 }

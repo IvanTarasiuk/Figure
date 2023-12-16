@@ -19,12 +19,14 @@ public class Sphere extends Figure {
     }
 
     @Override
-    public void areaFigure() {
+    public double areaFigure() {
         System.out.printf("%.2f", Math.PI * FOUR * (Math.pow(point.get(0) - point.get(INDEX_THREE), DEGREE) + Math.pow(point.get(1) - point.get(INDEX_FOUR), DEGREE) + Math.pow(point.get(INDEX_TWO) - point.get(INDEX_FIVE), DEGREE)));
+        return 0;
     }
 
     @Override
-    public void perimetrFigure() {
+    public float perimetrFigure() {
         System.out.print("Figure.Sphere has no perimetr.");
+        return 0;
     }
 }
