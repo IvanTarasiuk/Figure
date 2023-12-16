@@ -9,16 +9,13 @@ public class CylinderTest {
     private final ArrayList<Integer> point = new ArrayList<>();
 
     @Test
-    @DisplayName("Check Cylinder validity")
     public void checkValidity() {
         point.add(0);
         point.add(0);
         point.add(0);
-
         point.add(0);
         point.add(0);
         point.add(1);
-
         point.add(1);
         point.add(1);
         point.add(1);
@@ -30,16 +27,13 @@ public class CylinderTest {
     }
 
     @Test
-    @DisplayName("Check Cylinder invalidity")
     public void checkInvalidity() {
         point.add(1);
         point.add(1);
         point.add(1);
-
         point.add(1);
         point.add(1);
         point.add(0);
-
         point.add(1);
         point.add(1);
         point.add(2);
@@ -51,16 +45,13 @@ public class CylinderTest {
     }
 
     @Test
-    @DisplayName("Check Cylinder perimeter calculation")
     public void checkPerimeter() {
         point.add(0);
         point.add(0);
         point.add(0);
-
         point.add(1);
         point.add(0);
         point.add(0);
-
         point.add(0);
         point.add(0);
         point.add(2);
@@ -73,16 +64,13 @@ public class CylinderTest {
     }
 
     @Test
-    @DisplayName("Check Cylinder area calculation")
     public void checkArea() {
         point.add(0);
         point.add(0);
         point.add(0);
-
         point.add(0);
         point.add(0);
         point.add(1);
-
         point.add(1);
         point.add(1);
         point.add(1);

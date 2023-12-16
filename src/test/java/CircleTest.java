@@ -26,7 +26,7 @@ class CircleTest {
         point.add(3);
 
         Circle circle = new Circle(point, 3);
-        circle.areaFigure(); // Modify this to assert the expected result
+        circle.areaFigure();
     }
 
     @Test
@@ -37,6 +37,6 @@ class CircleTest {
         point.add(3);
 
         Circle circle = new Circle(point, 3);
-        circle.perimetrFigure(); // Modify this to assert the expected result
+        circle.perimetrFigure();
     }
 }

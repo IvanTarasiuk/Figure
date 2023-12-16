@@ -10,16 +10,13 @@ public class ConeTest {
     private final ArrayList<Integer> point = new ArrayList<>();
 
     @Test
-    @DisplayName("Check Cone validity")
     public void checkValidity() {
         point.add(0);
         point.add(0);
         point.add(0);
-
         point.add(1);
         point.add(0);
         point.add(0);
-
         point.add(0);
         point.add(0);
         point.add(1);
@@ -31,16 +28,13 @@ public class ConeTest {
     }
 
     @Test
-    @DisplayName("Check Cone invalidity")
     public void checkInvalidity() {
         point.add(1);
         point.add(1);
         point.add(1);
-
         point.add(1);
         point.add(1);
         point.add(0);
-
         point.add(1);
         point.add(1);
         point.add(2);
@@ -52,16 +46,13 @@ public class ConeTest {
     }
 
     @Test
-    @DisplayName("Check Cone perimeter calculation")
     public void checkPerimeter() {
         point.add(0);
         point.add(0);
         point.add(0);
-
         point.add(1);
         point.add(0);
         point.add(0);
-
         point.add(0);
         point.add(0);
         point.add(2);
@@ -74,16 +65,13 @@ public class ConeTest {
     }
 
     @Test
-    @DisplayName("Check Cone area calculation")
     public void checkArea() {
         point.add(0);
         point.add(0);
         point.add(0);
-
         point.add(1);
         point.add(0);
         point.add(0);
-
         point.add(0);
         point.add(0);
         point.add(2);
