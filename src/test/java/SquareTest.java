@@ -52,6 +52,6 @@ class SquareTest {
         point.add(3);
 
         Square square = new Square(point, 4);
-        square.perimetrFigure(); // Modify this to assert the expected result
+        square.perimetrFigure();
     }
 }
